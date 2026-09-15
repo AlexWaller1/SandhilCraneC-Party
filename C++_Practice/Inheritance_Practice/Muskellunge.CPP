@@ -300,5 +300,16 @@ int main()
     CrashBandicootMap[8] = "N. Trance";
     CrashBandicootMap[9] = "Spyro";
 
+    // Crash Bandicoot
+    std::cout << CrashBandicootMap.at(0) << std::endl;
+    // Neo Cortex
+    std::cout << CrashBandicootMap.at(1) << std::endl;
+    // Coco Bandicoot
+    std::cout << CrashBandicootMap.at(2) << std::endl;
+    // Dingodile
+    std::cout << CrashBandicootMap.at(3) << std::endl;
+    // Tiny Tiger
+    std::cout << CrashBandicootMap.at(4) << std::endl;
+
     return 37;
 }
