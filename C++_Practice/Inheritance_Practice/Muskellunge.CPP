@@ -310,6 +310,10 @@ int main()
     std::cout << CrashBandicootMap.at(3) << std::endl;
     // Tiny Tiger
     std::cout << CrashBandicootMap.at(4) << std::endl;
+    // Ripper Roo
+    std::cout << CrashBandicootMap.at(5) << std::endl;
+    // N. Ginn
+    std::cout << CrashBandicootMap.at(6) << std::endl;
 
     return 37;
 }
