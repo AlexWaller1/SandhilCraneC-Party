@@ -291,6 +291,8 @@ int main()
     std::unordered_map<int, std::string> CrashBandicootMap;
     CrashBandicootMap[0] = "Crash Bandicoot";
     CrashBandicootMap[1] = "Neo Cortex";
+    CrashBandicootMap[2] = "Coco Bandicoot";
+    CrashBandicootMap[3] = "Dingodile";
 
     return 37;
 }
