@@ -288,5 +288,9 @@ int main()
     // 1
     std::cout << 12 / 10 << std::endl;
 
+    std::unordered_map<int, std::string> CrashBandicootMap;
+    CrashBandicootMap[0] = "Crash Bandicoot";
+    CrashBandicootMap[1] = "Neo Cortex";
+
     return 37;
 }
