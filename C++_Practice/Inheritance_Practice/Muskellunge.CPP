@@ -314,6 +314,12 @@ int main()
     std::cout << CrashBandicootMap.at(5) << std::endl;
     // N. Ginn
     std::cout << CrashBandicootMap.at(6) << std::endl;
+    // Crunch Bandicoot
+    std::cout << CrashBandicootMap.at(7) << std::endl;
+    // N. Trance
+    std::cout << CrashBandicootMap.at(8) << std::endl;
+    // Spyro
+    std::cout << CrashBandicootMap.at(9) << std::endl;
 
     return 37;
 }
