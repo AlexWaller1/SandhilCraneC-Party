@@ -293,6 +293,9 @@ int main()
     CrashBandicootMap[1] = "Neo Cortex";
     CrashBandicootMap[2] = "Coco Bandicoot";
     CrashBandicootMap[3] = "Dingodile";
+    CrashBandicootMap[4] = "Tiny Tiger";
+    CrashBandicootMap[5] = "Ripper Roo";
+    CrashBandicootMap[6] = "N. Ginn";
 
     return 37;
 }
