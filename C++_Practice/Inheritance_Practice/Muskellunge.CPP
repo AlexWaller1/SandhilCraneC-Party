@@ -66,6 +66,60 @@ OneWayNode *AddTwoNumbers(OneWayNode *l1, OneWayNode *l2)
     return head;
 };
 
+int lengthOfLongestSubstring(std::string &str)
+{
+    if (str.size() == 1)
+    {
+        return 1;
+    }
+    if (str.size() == 0)
+    {
+        return 0;
+    }
+
+    std::unordered_map<char, int> chars_map;
+    int r_num = 0;
+    int left = 0;
+    int right = 0;
+    for (; right < str.size(); right++)
+    {
+        if (chars_map.contains(str.at(right)))
+        {
+            int char_num = chars_map[str.at(right)];
+            char_num++;
+            chars_map[str.at(right)] = char_num;
+        }
+        else
+        {
+            chars_map[str.at(right)] = 1;
+        }
+
+        while (chars_map[str.at(right)] > 1)
+        {
+
+            if (str.at(left) == str.at(right))
+            {
+                int diff = right - (left - 1);
+                int char_amount = chars_map[str.at(right)];
+                char_amount--;
+                chars_map[str.at(right)] = char_amount;
+                if (diff > r_num)
+                {
+                    r_num = diff;
+                }
+            }
+            left++;
+        }
+    }
+
+    if (r_num == 0)
+    {
+        return str.size();
+    }
+
+    return r_num;
+};
+
 int main()
 {
     // Muskellunge.cpp
@@ -321,5 +375,70 @@ int main()
     // Spyro
     std::cout << CrashBandicootMap.at(9) << std::endl;
 
+    std::cout << "------------------------------------" << std::endl;
+    std::cout << "================================================" << std::endl;
+
+    std::string lswrc_str_1 = "abcabcbb";
+    std::string lswrc_str_2 = "bbbbb";
+    std::string lswrc_str_3 = "pwwkew";
+    std::string lswrc_str_4 = "mq";
+    std::string lswrc_str_5 = "eea";
+    std::string lswrc_str_6 = "pww";
+
+    int longest_substr_num_1 = lengthOfLongestSubstring(lswrc_str_1);
+    // 3
+    std::cout << longest_substr_num_1 << std::endl;
+
+    int longest_substr_num_2 = lengthOfLongestSubstring(lswrc_str_2);
+    // 1
+    std::cout << longest_substr_num_2 << std::endl;
+
+    int longest_substr_num_3 = lengthOfLongestSubstring(lswrc_str_3);
+    // 3
+    std::cout << longest_substr_num_3 << std::endl;
+    // 2
+    std::cout << lengthOfLongestSubstring(lswrc_str_4) << std::endl;
+
+    std::cout << lengthOfLongestSubstring(lswrc_str_5) << std::endl;
+
+    std::cout << lengthOfLongestSubstring(lswrc_str_6) << std::endl;
+
     return 37;
 }
+
+/**
+ int lengthOfLongestSubstring(string str) {
+    if (str.size() == 1) {
+        return 1;
+    }
+    std::unordered_map<char, int> chars_map;
+    int i = 0;
+    int j = 0;
+    int r_num = 0;
+
+    for (; i < str.size(); i++)
+    {
+        if (chars_map.contains(str.at(i)))
+        {
+            if (str.at(i) == str.at(i - 1) && str.at(i) != (str.at(i + 1)))
+            {
+                j++;
+            }
+            if (j > r_num)
+            {
+                r_num = j;
+            }
+            j = 0;
+            chars_map.clear();
+        }
+        else
+        {
+            chars_map[str.at(i)] = 1;
+            j++;
+        }
+    }
+
+    return r_num;
+    }
+};
+ */

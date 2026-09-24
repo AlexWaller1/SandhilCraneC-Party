@@ -1,1 +1,1 @@
-next->val
+left++;
