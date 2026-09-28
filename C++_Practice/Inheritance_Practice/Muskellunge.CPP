@@ -7,6 +7,7 @@
 #include <queue>
 #include <ctime>
 #include <print>
+#include <set>
 
 struct OneWayNode
 {
@@ -78,9 +79,9 @@ int lengthOfLongestSubstring(std::string &str)
     }
 
     std::unordered_map<char, int> chars_map;
-    int r_num = 0;
     int left = 0;
     int right = 0;
+    int max_length = 0;
     for (; right < str.size(); right++)
     {
         if (chars_map.contains(str.at(right)))
@@ -96,28 +97,24 @@ int lengthOfLongestSubstring(std::string &str)
 
         while (chars_map[str.at(right)] > 1)
         {
-
             if (str.at(left) == str.at(right))
             {
-                int diff = right - (left - 1);
-                int char_amount = chars_map[str.at(right)];
-                char_amount--;
-                chars_map[str.at(right)] = char_amount;
-                if (diff > r_num)
-                {
-                    r_num = diff;
-                }
+                int char_count = chars_map[str.at(right)];
+                char_count--;
+                chars_map[str.at(right)] = char_count;
+            }
+            else
+            {
+                int char_count = chars_map[str.at(left)];
+                char_count--;
+                chars_map[str.at(left)] = char_count;
             }
             left++;
         }
+        max_length = std::max(max_length, right - left + 1);
     }
 
-    if (r_num == 0)
-    {
-        return str.size();
-    }
-
-    return r_num;
+    return max_length;
 };
 
 int main()
