@@ -108,6 +108,10 @@ int lengthOfLongestSubstring(std::string &str)
     return max_length;
 };
 
+int lengthOfLongestSubstring2(std::string &str) {
+
+};
+
 int main()
 {
     // Muskellunge.cpp
