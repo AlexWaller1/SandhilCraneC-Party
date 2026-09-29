@@ -108,8 +108,27 @@ int lengthOfLongestSubstring(std::string &str)
     return max_length;
 };
 
-int lengthOfLongestSubstring2(std::string &str) {
+int lengthOfLongestSubstring2(std::string &str)
+{
+    std::unordered_map<char, int> chars_map;
+    int max_length = 0;
+    int left = 0;
+    int right = 0;
 
+    for (; right < str.size(); right++)
+    {
+        if (chars_map.contains(str.at(right)))
+        {
+            left = chars_map[str.at(right)] + 1;
+            chars_map[str.at(right)] = right;
+        }
+        else
+        {
+            chars_map[str.at(right)] = right;
+        }
+        max_length = std::max(max_length, right - left + 1);
+    }
+    return max_length;
 };
 
 int main()
