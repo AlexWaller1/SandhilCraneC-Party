@@ -69,15 +69,6 @@ OneWayNode *AddTwoNumbers(OneWayNode *l1, OneWayNode *l2)
 
 int lengthOfLongestSubstring(std::string &str)
 {
-    if (str.size() == 1)
-    {
-        return 1;
-    }
-    if (str.size() == 0)
-    {
-        return 0;
-    }
-
     std::unordered_map<char, int> chars_map;
     int left = 0;
     int right = 0;
