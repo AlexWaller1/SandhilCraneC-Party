@@ -32,5 +32,20 @@ struct TwoWayNode
 
 int main()
 {
+
+    std::string rainbow_trout_cpp = "RainbowTrout.CPP";
+
+    // RainbowTrout.CPP
+    std::cout << rainbow_trout_cpp << std::endl;
+
+    std::string rainbow_trout = "Rainbow Trout";
+    std::string brown_trout = "Brown Trout";
+    std::string goldeye = "Goldeye";
+    std::string sucker = "Sucker";
+    std::string paddlefish = "Paddlefish";
+    std::string whitefish = "Whitefish";
+
+    std::vector<std::string> bighornRiver[6] = {};
+    
     return 37;
 }
