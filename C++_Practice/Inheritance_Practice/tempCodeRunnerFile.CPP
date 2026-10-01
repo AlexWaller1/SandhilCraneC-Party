@@ -1,1 +1,1 @@
-left++;
+left = chars_map[str.at(right)] + 1;

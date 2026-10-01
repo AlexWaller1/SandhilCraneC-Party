@@ -119,7 +119,11 @@ int lengthOfLongestSubstring2(std::string &str)
     {
         if (chars_map.contains(str.at(right)))
         {
-            left = chars_map[str.at(right)] + 1;
+            if (left <= chars_map[str.at(right)])
+            {
+                left = chars_map[str.at(right)] + 1;
+            }
+
             chars_map[str.at(right)] = right;
         }
         else
@@ -395,6 +399,9 @@ int main()
     std::string lswrc_str_4 = "mq";
     std::string lswrc_str_5 = "eea";
     std::string lswrc_str_6 = "pww";
+    std::string lswrc_str_7 = "ccbbcc";
+    std::string lswrc_str_8 = "ccbb";
+    std::string lswrc_str_9 = "ccbbc";
 
     int longest_substr_num_1 = lengthOfLongestSubstring(lswrc_str_1);
     // 3
@@ -413,6 +420,28 @@ int main()
     std::cout << lengthOfLongestSubstring(lswrc_str_5) << std::endl;
 
     std::cout << lengthOfLongestSubstring(lswrc_str_6) << std::endl;
+
+    std::cout << "=========================================" << std::endl;
+
+    std::cout << "============================================" << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_1) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_2) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_3) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_4) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_5) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_6) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_7) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_8) << std::endl;
+
+    std::cout << lengthOfLongestSubstring2(lswrc_str_9) << std::endl;
 
     return 37;
 }
