@@ -55,6 +55,12 @@ int main()
     bighornRiver->push_back(sucker);
     bighornRiver->push_back(paddlefish);
     bighornRiver->push_back(whitefish);
+    bighornRiver->push_back("Otter");
+
+    // 7
+    std::cout << bighornRiver->size() << std::endl;
+    // Rainbow Trout
+    std::cout << bighornRiver->at(0) << std::endl;
 
     return 37;
 }
