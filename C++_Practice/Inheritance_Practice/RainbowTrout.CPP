@@ -46,6 +46,15 @@ int main()
     std::string whitefish = "Whitefish";
 
     std::vector<std::string> bighornRiver[6] = {};
-    
+
+    // '.' used for direct object
+    // '->' used for pointer to object
+    bighornRiver->push_back(rainbow_trout);
+    bighornRiver->push_back(brown_trout);
+    bighornRiver->push_back(goldeye);
+    bighornRiver->push_back(sucker);
+    bighornRiver->push_back(paddlefish);
+    bighornRiver->push_back(whitefish);
+
     return 37;
 }
