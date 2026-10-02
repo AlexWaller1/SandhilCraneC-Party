@@ -57,6 +57,12 @@ int main()
     std::string paddlefish = "Paddlefish";
     std::string whitefish = "Whitefish";
 
+    /*
+        the '[6]' at the end essentially makes this a C-style array
+        and a pointer, so it's functions and elements need to be
+        accessed like a reference rather than a direct object,
+        so we use the '->' instead of the '.' for access
+    */
     std::vector<std::string> bighornRiver[6] = {};
 
     // '.' used for direct object
