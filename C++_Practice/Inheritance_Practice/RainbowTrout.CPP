@@ -30,6 +30,18 @@ struct TwoWayNode
     TwoWayNode(std::string name, TwoWayNode *next, TwoWayNode *prev) : id(id++), name(name), prev(prev), next(next) {};
 };
 
+void printNumbersRecursion(int num)
+{
+    if (num == 0)
+    {
+        return;
+    }
+
+    std::cout << num << std::endl;
+
+    printNumbersRecursion(num - 1);
+};
+
 int main()
 {
 
@@ -61,6 +73,20 @@ int main()
     std::cout << bighornRiver->size() << std::endl;
     // Rainbow Trout
     std::cout << bighornRiver->at(0) << std::endl;
+
+    std::vector<std::string> bighornRiver2 = {};
+    bighornRiver2.push_back(rainbow_trout);
+    bighornRiver2.push_back(brown_trout);
+    bighornRiver2.push_back(goldeye);
+
+    /*
+        5
+        4
+        3
+        2
+        1
+    */
+    printNumbersRecursion(5);
 
     return 37;
 }
