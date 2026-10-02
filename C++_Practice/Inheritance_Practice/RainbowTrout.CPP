@@ -67,6 +67,9 @@ int main()
 
     // '.' used for direct object
     // '->' used for pointer to object
+    // also noting that in this case it is pushing into the 
+    // first vector element of the array since we aren't specifying
+    // that can be tricky, so just noting that
     bighornRiver->push_back(rainbow_trout);
     bighornRiver->push_back(brown_trout);
     bighornRiver->push_back(goldeye);
