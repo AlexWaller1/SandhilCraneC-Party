@@ -11,7 +11,7 @@
 
 struct OneWayNode
 {
-    int data;
+    static int data;
     OneWayNode *next;
     OneWayNode() : data(0), next(nullptr) {};
     OneWayNode(int data) : data(data), next(nullptr) {};
