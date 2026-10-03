@@ -11,7 +11,7 @@
 
 struct OneWayNode
 {
-    static int data;
+     int data;
     OneWayNode *next;
     OneWayNode() : data(0), next(nullptr) {};
     OneWayNode(int data) : data(data), next(nullptr) {};
@@ -20,15 +20,30 @@ struct OneWayNode
 
 struct TwoWayNode
 {
-    int id = 0;
+    static int counter;
+    int id;
     std::string name;
     TwoWayNode *next;
     TwoWayNode *prev;
-    TwoWayNode() : id(id++), name("no name yet"), next(nullptr), prev(nullptr) {};
-    TwoWayNode(std::string name) : id(id++), name(name), next(nullptr), prev(nullptr) {};
-    TwoWayNode(std::string name, TwoWayNode *next) : id(id++), name(name), next(next), prev(nullptr) {};
-    TwoWayNode(std::string name, TwoWayNode *next, TwoWayNode *prev) : id(id++), name(name), prev(prev), next(next) {};
+    TwoWayNode() : name("no name yet"), next(nullptr), prev(nullptr) {
+        counter++;
+        this->id = counter;
+    };
+    TwoWayNode(std::string name) : name(name), next(nullptr), prev(nullptr) {
+        counter++;
+        this->id = counter;
+    };
+    TwoWayNode(std::string name, TwoWayNode *next) : name(name), next(next), prev(nullptr) {
+        counter++;
+        this->id = counter;
+    };
+    TwoWayNode(std::string name, TwoWayNode *next, TwoWayNode *prev) :  name(name), prev(prev), next(next) {
+        counter++;
+        this->id = counter;
+    };
 };
+
+int TwoWayNode::counter = 0;
 
 void printNumbersRecursion(int num)
 {
@@ -96,10 +111,32 @@ int main()
         1
     */
     printNumbersRecursion(5);
-
+    // instantiated on the stack
     std::string lisbeth_salander = "Lisbeth Salander";
 
     std::cout << lisbeth_salander << std::endl;
+
+    // instantiated on the heap
+    TwoWayNode *sasha_calle = new TwoWayNode("Sasha Calle");
+
+    TwoWayNode *sky_ferreira = new TwoWayNode("Sky Ferreira");
+    
+    // '->' is used to access attribute when we are accessing a reference
+    // 1
+    std::cout << sasha_calle->id << std::endl;
+    // Sasha Calle
+    std::cout << sasha_calle->name << std::endl;
+    // 2
+    std::cout << sky_ferreira->id << std::endl;
+    // Sky Ferreira
+    std::cout << sky_ferreira->name << std::endl;
+
+
+    
+    // make sure heap data is deleted so there is no data leak
+    delete sasha_calle;
+    // make sure heap data is deleted so there is no data leak
+    delete sky_ferreira;
 
     return 37;
 }
