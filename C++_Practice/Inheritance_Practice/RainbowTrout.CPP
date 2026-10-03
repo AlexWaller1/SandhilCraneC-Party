@@ -97,5 +97,9 @@ int main()
     */
     printNumbersRecursion(5);
 
+    std::string lisbeth_salander = "Lisbeth Salander";
+
+    std::cout << lisbeth_salander << std::endl;
+
     return 37;
 }
