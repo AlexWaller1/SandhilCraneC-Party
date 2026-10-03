@@ -118,8 +118,22 @@ int main()
 
     // instantiated on the heap
     TwoWayNode *sasha_calle = new TwoWayNode("Sasha Calle");
-
+    // instantiated on the heap
     TwoWayNode *sky_ferreira = new TwoWayNode("Sky Ferreira");
+    // instantiated on the heap
+    TwoWayNode *victoria_justice = new TwoWayNode("Victoria Justice");
+    // instantiated on the heap
+    TwoWayNode *noomi_rapace = new TwoWayNode("Noomi Rapace");
+    // instantiated on the heap
+    TwoWayNode *jessica_henwick = new TwoWayNode("Jessica Henwick");
+    // instantiated on the heap
+    TwoWayNode *mary_elizabeth_winstead = new TwoWayNode("Mary Elizabeth Winstead");
+
+
+
+
+
+
     
     // '->' is used to access attribute when we are accessing a reference
     // 1
@@ -137,6 +151,12 @@ int main()
     delete sasha_calle;
     // make sure heap data is deleted so there is no data leak
     delete sky_ferreira;
+    // make sure heap data is deleted so there is no data leak
+    delete victoria_justice;
+    // make sure heap data is deleted so there is no data leak
+    delete noomi_rapace;
+    // make sure heap data is deleted so there is no data leak
+    delete jessica_henwick;
 
     return 37;
 }
