@@ -161,6 +161,24 @@ int main()
     // Mary Elizabeth Winstead
     std::cout << mary_elizabeth_winstead->name << std::endl;
 
+    sasha_calle->next = sky_ferreira;
+    sasha_calle->prev = mary_elizabeth_winstead;
+
+    sky_ferreira->next = victoria_justice;
+    sky_ferreira->prev = sasha_calle;
+
+    victoria_justice->next = noomi_rapace;
+    victoria_justice->prev = sky_ferreira;
+
+    noomi_rapace->next = jessica_henwick;
+    noomi_rapace->prev = victoria_justice;
+
+    jessica_henwick->next = mary_elizabeth_winstead;
+    jessica_henwick->prev = noomi_rapace;
+
+    mary_elizabeth_winstead->next = sasha_calle;
+    mary_elizabeth_winstead->prev = jessica_henwick;
+
 
     
     // make sure heap data is deleted so there is no data leak
