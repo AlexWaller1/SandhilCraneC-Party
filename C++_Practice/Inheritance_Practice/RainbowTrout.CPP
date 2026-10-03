@@ -144,6 +144,22 @@ int main()
     std::cout << sky_ferreira->id << std::endl;
     // Sky Ferreira
     std::cout << sky_ferreira->name << std::endl;
+    // 3
+    std::cout << victoria_justice->id << std::endl;
+    // Victoria Justice
+    std::cout << victoria_justice->name << std::endl;
+    // 4
+    std::cout << noomi_rapace->id << std::endl;
+    // Noomi Rapace
+    std::cout << noomi_rapace->name << std::endl;
+    // 5
+    std::cout << jessica_henwick->id << std::endl;
+    // Jessica Henwick
+    std::cout << jessica_henwick->name << std::endl;
+    // 6
+    std::cout << mary_elizabeth_winstead->id << std::endl;
+    // Mary Elizabeth Winstead
+    std::cout << mary_elizabeth_winstead->name << std::endl;
 
 
     
@@ -157,6 +173,8 @@ int main()
     delete noomi_rapace;
     // make sure heap data is deleted so there is no data leak
     delete jessica_henwick;
+    // make sure heap data is deleted so there is no data leak
+    delete mary_elizabeth_winstead;
 
     return 37;
 }
