@@ -11,7 +11,7 @@
 
 struct OneWayNode
 {
-     int data;
+    int data;
     OneWayNode *next;
     OneWayNode() : data(0), next(nullptr) {};
     OneWayNode(int data) : data(data), next(nullptr) {};
@@ -258,6 +258,20 @@ int main()
     std::cout << "===========================================================" << std::endl;
     std::cout << "==================================================" << std::endl;
 
+    std::unordered_map<std::string, std::string> crash_map;
+    crash_map["crash"] = "Crash Bandicoot";
+    crash_map["spyro"] = "Spyro";
+    crash_map["dingo"] = "Dingodile";
+    crash_map["roo"] = "Ripper Roo";
+
+    // 1
+    std::cout << crash_map.contains("crash") << std::endl;
+    // Crash Bandicoot
+    std::cout << crash_map["crash"] << std::endl;
+
+    std::cout << "============================================" << std::endl;
+    std::cout << "===================================================" << std::endl;
+
     int remainder_1 = 10 % 7;
     int remainder_2 = 27 % 4;
     int remainder_3 = 49 % 5;
@@ -282,6 +296,8 @@ int main()
     OneWayNode *node_int_4 = new OneWayNode(2);
     OneWayNode *node_int_5 = new OneWayNode(4);
     OneWayNode *node_int_6 = new OneWayNode(3);
+
+    std::cout << __cplusplus << std::endl;
 
 
     // make sure heap data is deleted so there is no data leak
