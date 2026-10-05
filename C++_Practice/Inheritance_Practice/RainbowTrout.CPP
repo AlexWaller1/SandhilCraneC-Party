@@ -179,8 +179,18 @@ int main()
     mary_elizabeth_winstead->next = sasha_calle;
     mary_elizabeth_winstead->prev = jessica_henwick;
 
-
+    std::cout << "================================================" << std::endl;
+    std::cout << "================================================" << std::endl;
     
+    // 1
+    std::cout << sasha_calle->id << std::endl;
+    // Sasha Calle
+    std::cout << sasha_calle->name << std::endl;
+    // 2
+    std::cout << sasha_calle->next->id << std::endl;
+    // Sky Ferreira
+    std::cout << sasha_calle->next->name << std::endl;
+
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
     // make sure heap data is deleted so there is no data leak
