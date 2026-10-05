@@ -269,6 +269,21 @@ int main()
     // 4
     std::cout << remainder_3 << std::endl;
 
+    int num_1 = 297;
+    int num_2 = 342;
+
+    // 639
+    std::cout << num_1 + num_2 << std::endl;
+
+    OneWayNode *node_int_1 = new OneWayNode(7);
+    OneWayNode *node_int_2 = new OneWayNode(9);
+    OneWayNode *node_int_3 = new OneWayNode(2);
+
+    OneWayNode *node_int_4 = new OneWayNode(2);
+    OneWayNode *node_int_5 = new OneWayNode(4);
+    OneWayNode *node_int_6 = new OneWayNode(3);
+
+
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
     // make sure heap data is deleted so there is no data leak
@@ -281,6 +296,18 @@ int main()
     delete jessica_henwick;
     // make sure heap data is deleted so there is no data leak
     delete mary_elizabeth_winstead;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_1;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_2;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_3;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_4;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_5;
+    // make sure heap data is deleted so there is no data leak
+    delete node_int_6;
 
     return 37;
 }
