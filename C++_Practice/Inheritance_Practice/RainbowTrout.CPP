@@ -255,6 +255,20 @@ int main()
     // Jessica Henwick
     std::cout << mary_elizabeth_winstead->prev->name << std::endl;
 
+    std::cout << "===========================================================" << std::endl;
+    std::cout << "==================================================" << std::endl;
+
+    int remainder_1 = 10 % 7;
+    int remainder_2 = 27 % 4;
+    int remainder_3 = 49 % 5;
+
+    // 3
+    std::cout << remainder_1 << std::endl;
+    // 3
+    std::cout << remainder_2 << std::endl;
+    // 4
+    std::cout << remainder_3 << std::endl;
+
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
     // make sure heap data is deleted so there is no data leak
