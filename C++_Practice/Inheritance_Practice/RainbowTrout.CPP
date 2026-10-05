@@ -57,6 +57,8 @@ void printNumbersRecursion(int num)
     printNumbersRecursion(num - 1);
 };
 
+OneWayNode *reverseSum(OneWayNode l1, OneWayNode l2) {};
+
 int main()
 {
 
@@ -303,6 +305,7 @@ int main()
     OneWayNode *node_int_5 = new OneWayNode(4);
     OneWayNode *node_int_6 = new OneWayNode(3);
 
+    // 202400
     std::cout << __cplusplus << std::endl;
 
 
