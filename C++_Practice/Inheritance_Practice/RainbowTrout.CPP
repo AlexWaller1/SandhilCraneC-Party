@@ -250,6 +250,10 @@ int main()
     std::cout << mary_elizabeth_winstead->next->id << std::endl;
     // Sasha Calle
     std::cout << mary_elizabeth_winstead->next->name << std::endl;
+    // 5
+    std::cout << mary_elizabeth_winstead->prev->id << std::endl;
+    // Jessica Henwick
+    std::cout << mary_elizabeth_winstead->prev->name << std::endl;
 
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
