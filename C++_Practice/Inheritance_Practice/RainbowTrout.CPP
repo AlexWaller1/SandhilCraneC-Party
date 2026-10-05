@@ -206,6 +206,14 @@ int main()
     std::cout << sky_ferreira->prev->id << std::endl;
     // Sasha Calle
     std::cout << sky_ferreira->prev->name << std::endl;
+    // 3
+    std::cout << victoria_justice->id << std::endl;
+    // Victoria Justice
+    std::cout << victoria_justice->name << std::endl;
+    // 4
+    std::cout << victoria_justice->next->id << std::endl;
+    // 5
+    std::cout << victoria_justice->next->name << std::endl;
 
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
