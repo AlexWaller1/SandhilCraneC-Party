@@ -264,10 +264,16 @@ int main()
     crash_map["dingo"] = "Dingodile";
     crash_map["roo"] = "Ripper Roo";
 
-    // 1
+    // 1 (true)
     std::cout << crash_map.contains("crash") << std::endl;
     // Crash Bandicoot
     std::cout << crash_map["crash"] << std::endl;
+    // 1 (true)
+    std::cout << crash_map.contains("spyro") << std::endl;
+    // Spyro
+    std::cout << crash_map["spyro"] << std::endl;
+    // 0 (false)
+    std::cout << crash_map.contains("Earthworm Jim") << std::endl;
 
     std::cout << "============================================" << std::endl;
     std::cout << "===================================================" << std::endl;
