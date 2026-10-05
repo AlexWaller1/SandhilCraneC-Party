@@ -226,6 +226,10 @@ int main()
     std::cout << noomi_rapace->next->id << std::endl;
     // Jessica Henwick
     std::cout << noomi_rapace->next->name << std::endl;
+    // 3
+    std::cout << noomi_rapace->prev->id << std::endl;
+    // Victoria Justice
+    std::cout << noomi_rapace->prev->name<< std::endl;
 
     // make sure heap data is deleted so there is no data leak
     delete sasha_calle;
