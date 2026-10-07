@@ -291,6 +291,8 @@ int main()
     // 4
     std::cout << remainder_3 << std::endl;
 
+    std::vector<std::string> crash_bandicoot;
+
     int num_1 = 297;
     int num_2 = 342;
 
