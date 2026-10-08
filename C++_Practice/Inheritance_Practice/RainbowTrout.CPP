@@ -291,8 +291,40 @@ int main()
     // 4
     std::cout << remainder_3 << std::endl;
 
-    std::vector<std::string> crash_bandicoot;
+    std::string crash_bandicoot = "Crash Bandicoot";
+    std::string neo_cortex = "Neo Cortex";
+    std::string coco_bandicoot = "Coco Bandicoot";
+    std::string dingodile = "Dingodile";
+    std::string tiny_tiger = "Tiny Tiger";
+    std::string ripper_roo = "Ripper Roo";
+    std::string n_ginn = "N. Ginn";
+    std::string n_trance = "N. Trance";
+    std::string crunch_bandicoot = "Crunch Bandicoot";
+    std::string spyro = "Spyro";
 
+    std::vector<std::string> crash_vector = {};
+
+    crash_vector.push_back(crash_bandicoot);
+    crash_vector.push_back(neo_cortex);
+    crash_vector.push_back(coco_bandicoot);
+    crash_vector.push_back(dingodile);
+    crash_vector.push_back(tiny_tiger);
+    crash_vector.push_back(n_ginn);
+    crash_vector.push_back(n_trance);
+    crash_vector.push_back(crunch_bandicoot);
+    crash_vector.push_back(spyro);
+
+    std::cout << "------------------------------------------------" << std::endl;
+    std::cout << "------------------------------------------------" << std::endl;
+
+    // crash_vector
+    std::cout << "crash_vector" << std::endl;
+    // 9
+    std::cout << crash_vector.size() << std::endl;
+
+    std::cout << "------------------------------------------------" << std::endl;
+    std::cout << "------------------------------------------------" << std::endl;
+    
     int num_1 = 297;
     int num_2 = 342;
 
