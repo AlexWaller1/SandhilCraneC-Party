@@ -300,6 +300,7 @@ int main()
     std::string n_ginn = "N. Ginn";
     std::string n_trance = "N. Trance";
     std::string crunch_bandicoot = "Crunch Bandicoot";
+    std::string nitrous_oxide = "Nitrous Oxide";
     std::string spyro = "Spyro";
 
     std::vector<std::string> crash_vector = {};
@@ -312,6 +313,7 @@ int main()
     crash_vector.push_back(n_ginn);
     crash_vector.push_back(n_trance);
     crash_vector.push_back(crunch_bandicoot);
+    crash_vector.push_back(nitrous_oxide);
     crash_vector.push_back(spyro);
 
     std::cout << "------------------------------------------------" << std::endl;
@@ -321,6 +323,16 @@ int main()
     std::cout << "crash_vector" << std::endl;
     // 9
     std::cout << crash_vector.size() << std::endl;
+    // Crash Bandicoot
+    std::cout << crash_vector[0] << std::endl;
+    // Neo Vortex
+    std::cout << crash_vector[1] << std::endl;
+    // Coco Bandicoot
+    std::cout << crash_vector[2] << std::endl;
+    // Dingodile
+    std::cout << crash_vector[3] << std::endl;
+
+    std::cout << crash_vector[4] << std::endl;
 
     std::cout << "------------------------------------------------" << std::endl;
     std::cout << "------------------------------------------------" << std::endl;
