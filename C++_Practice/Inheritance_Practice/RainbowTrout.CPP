@@ -359,7 +359,34 @@ int main()
     TwoWayNode *crunch_bandicoot_node = new TwoWayNode(crunch_bandicoot);
     TwoWayNode *nitrous_oxide_node = new TwoWayNode(nitrous_oxide);
     TwoWayNode *spyro_node = new TwoWayNode(spyro);
+
+    crash_bandicoot_node->next = neo_cortex_node;
     
+    neo_cortex_node->next = coco_bandicoot_node;
+    neo_cortex_node->prev = crash_bandicoot_node;
+
+    coco_bandicoot_node->next = dingodile_node;
+    coco_bandicoot_node->prev = neo_cortex_node;
+
+    dingodile_node->next = tiny_tiger_node;
+    dingodile_node->prev = coco_bandicoot_node;
+
+    tiny_tiger_node->next = n_ginn_node;
+    tiny_tiger_node->prev = dingodile_node;
+
+    n_ginn_node->next = n_trance_node;
+    n_ginn_node->prev = tiny_tiger_node;
+
+    n_trance_node->next = crunch_bandicoot_node;
+    n_trance_node->prev = n_ginn_node;
+
+    crunch_bandicoot_node->next = nitrous_oxide_node;
+    crunch_bandicoot_node->prev = n_trance_node;
+
+    nitrous_oxide_node->next = spyro_node;
+    nitrous_oxide_node->prev = crunch_bandicoot_node;
+
+    spyro_node->prev = nitrous_oxide_node;
 
 
     std::cout << "------------------------------------------------" << std::endl;
