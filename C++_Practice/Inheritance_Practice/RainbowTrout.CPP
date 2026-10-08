@@ -321,7 +321,7 @@ int main()
 
     // crash_vector
     std::cout << "crash_vector" << std::endl;
-    // 9
+    // 10
     std::cout << crash_vector.size() << std::endl;
     // Crash Bandicoot
     std::cout << crash_vector[0] << std::endl;
@@ -331,8 +331,36 @@ int main()
     std::cout << crash_vector[2] << std::endl;
     // Dingodile
     std::cout << crash_vector[3] << std::endl;
-
+    // Tiny Tiger
     std::cout << crash_vector[4] << std::endl;
+    // N. Ginn
+    std::cout << crash_vector[5] << std::endl;
+    // N. Trance
+    std::cout << crash_vector[6] << std::endl;
+    // Crunch Bandicoot
+    std::cout << crash_vector[7] << std::endl;
+    // Nitrous Oxide
+    std::cout << crash_vector[8] << std::endl;
+    // Spyro
+    std::cout << crash_vector[9] << std::endl;
+    // 15
+    std::cout << crash_bandicoot.size() << std::endl;
+
+    std::cout << "------------------------------------------------" << std::endl;
+    std::cout << "------------------------------------------------" << std::endl;
+
+    TwoWayNode *crash_bandicoot_node = new TwoWayNode(crash_bandicoot);
+    TwoWayNode *neo_cortex_node = new TwoWayNode(neo_cortex);
+    TwoWayNode *coco_bandicoot_node = new TwoWayNode(coco_bandicoot);
+    TwoWayNode *dingodile_node = new TwoWayNode(dingodile);
+    TwoWayNode *tiny_tiger_node = new TwoWayNode(tiny_tiger);
+    TwoWayNode *n_ginn_node = new TwoWayNode(n_ginn);
+    TwoWayNode *n_trance_node = new TwoWayNode(n_trance);
+    TwoWayNode *crunch_bandicoot_node = new TwoWayNode(crunch_bandicoot);
+    TwoWayNode *nitrous_oxide_node = new TwoWayNode(nitrous_oxide);
+    TwoWayNode *spyro_node = new TwoWayNode(spyro);
+    
+
 
     std::cout << "------------------------------------------------" << std::endl;
     std::cout << "------------------------------------------------" << std::endl;
@@ -379,6 +407,26 @@ int main()
     delete node_int_5;
     // make sure heap data is deleted so there is no data leak
     delete node_int_6;
+    // make sure heap data is deleted so there is no data leak
+    delete crash_bandicoot_node;
+    // make sure heap data is deleted so there is no data leak
+    delete neo_cortex_node;
+    // make sure heap data is deleted so there is no data leak
+    delete coco_bandicoot_node;
+    // make sure heap data is deleted so there is no data leak
+    delete dingodile_node;
+    // make sure heap data is deleted so there is no data leak
+    delete tiny_tiger_node;
+    // make sure heap data is deleted so there is no data leak
+    delete n_ginn_node;
+    // make sure heap data is deleted so there is no data leak
+    delete n_trance_node;
+    // make sure heap data is deleted so there is no data leak
+    delete crunch_bandicoot_node;
+    // make sure heap data is deleted so there is no data leak
+    delete nitrous_oxide_node;
+    // make sure heap data is deleted so there is no data leak
+    delete spyro_node;
 
     return 37;
 }
