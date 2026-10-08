@@ -388,6 +388,38 @@ int main()
 
     spyro_node->prev = nitrous_oxide_node;
 
+    // 7
+    std::cout << crash_bandicoot_node->id << std::endl;
+    // Crash Bandicoot
+    std::cout << crash_bandicoot_node->name << std::endl;
+    // 8
+    std::cout << crash_bandicoot_node->next->id << std::endl;
+    // Neo Cortex
+    std::cout << crash_bandicoot_node->next->name << std::endl;
+    // 8
+    std::cout << neo_cortex_node->id << std::endl;
+    // Neo Cortex
+    std::cout << neo_cortex_node->name << std::endl;
+    // 9
+    std::cout << neo_cortex_node->next->id << std::endl;
+    // Coco Bandicoot
+    std::cout << neo_cortex_node->next->name << std::endl;
+    // 7
+    std::cout << neo_cortex_node->prev->id << std::endl;
+    // Crash Bandicoot
+    std::cout << neo_cortex_node->prev->name << std::endl;
+    // 9
+    std::cout << coco_bandicoot_node->id << std::endl;
+    // Coco Bandicoot
+    std::cout << coco_bandicoot_node->name << std::endl;
+    // 10
+    std::cout << coco_bandicoot_node->next->id << std::endl;
+    // Dingodile
+    std::cout << coco_bandicoot_node->next->name << std::endl;
+    // 8
+    std::cout << coco_bandicoot_node->prev->id << std::endl;
+    // Neo Cortex
+    std::cout << coco_bandicoot_node->prev->name << std::endl;
 
     std::cout << "------------------------------------------------" << std::endl;
     std::cout << "------------------------------------------------" << std::endl;
